@@ -19,7 +19,7 @@ mod that adds basic material nodes and items
 
 ### Option 3: use git
 
-* `git clone https://github.com/mt-mods/basic_materials.git`
+* `git clone https://github.com/CheyenneMachina/basic_materials.git`
 * `cd basic_materials`
 * `git submodule init`
 * `git submodule update`
