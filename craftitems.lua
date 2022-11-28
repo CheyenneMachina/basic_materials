@@ -85,6 +85,18 @@ minetest.register_craftitem("basic_materials:gold_wire", {
 	inventory_image = "basic_materials_gold_wire.png"
 })
 
+minetest.register_craftitem("basic_materials:stainless_steel_wire", {
+	description = S("Spool of stainless steel wire"),
+	groups = { wire = 1 },
+	inventory_image = "basic_materials_stainless_steel_wire.png"
+})
+
+minetest.register_craftitem("basic_materials:aluminum_wire", {
+	description = S("Spool of aluminum wire"),
+	groups = { wire = 1 },
+	inventory_image = "basic_materials_aluminum_wire.png"
+})
+
 minetest.register_craftitem("basic_materials:steel_strip", {
 	description = S("Steel Strip"),
 	groups = { strip = 1 },
@@ -97,9 +109,48 @@ minetest.register_craftitem("basic_materials:copper_strip", {
 	inventory_image = "basic_materials_copper_strip.png"
 })
 
+minetest.register_craftitem("basic_materials:lead_strip", {
+	description = S("Lead Strip"),
+	groups = { strip = 1 },
+	inventory_image = "basic_materials_lead_strip.png"
+})
+
+minetest.register_craftitem("basic_materials:gold_strip", {
+	description = S("Gold Strip"),
+	groups = { strip = 1 },
+	inventory_image = "basic_materials_gold_strip.png"
+})
+
+minetest.register_craftitem("basic_materials:stainless_steel_strip", {
+	description = S("Stainless Steel Strip"),
+	groups = { strip = 1 },
+	inventory_image = "basic_materials_stainless_steel_strip.png"
+})
+
+minetest.register_craftitem("basic_materials:aluminum_strip", {
+	description = S("Aluminum Strip"),
+	groups = { strip = 1 },
+	inventory_image = "basic_materials_aluminum_strip.png"
+})
+
 minetest.register_craftitem("basic_materials:steel_bar", {
 	description = S("Steel Bar"),
 	inventory_image = "basic_materials_steel_bar.png",
+})
+
+minetest.register_craftitem("basic_materials:carbon_steel_bar", {
+	description = S("Carbon Steel Bar"),
+	inventory_image = "basic_materials_carbon_steel_bar.png",
+})
+
+minetest.register_craftitem("basic_materials:stainless_steel_bar", {
+	description = S("Stainless Steel Bar"),
+	inventory_image = "basic_materials_stainless_steel_bar.png",
+})
+
+minetest.register_craftitem("basic_materials:aluminum_bar", {
+	description = S("Aluminum Bar"),
+	inventory_image = "basic_materials_aluminum_bar.png",
 })
 
 minetest.register_craftitem("basic_materials:chainlink_brass", {

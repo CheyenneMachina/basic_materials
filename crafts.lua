@@ -20,6 +20,16 @@ if minetest.get_modpath("moreores") then
 	materials.silver_ingot = "moreores:silver_ingot"
 end
 
+if minetest.get_modpath("technic") then
+	materials.lead_ingot = "technic:lead_ingot"
+	materials.carbon_steel_ingot = "technic:carbon_steel_ingot"
+	materials.stainless_steel_ingot = "technic:stainless_steel_ingot"
+end
+
+if minetest.get_modpath("aloz") then
+	materials["aluminum_ingot"] = "aloz:aluminum_ingot"
+end
+
 if minetest.get_modpath("mcl_core") then
 	materials = {
 		dirt = "mcl_core:dirt",
@@ -70,7 +80,7 @@ elseif minetest.get_modpath("hades_core") then
 		torch = "hades_torches:torch",
 		diamond = "hades_core:diamond",
 		clay_lump = "hades_core:clay_lump",
-		dye_dark_grey = "dye:dark_grey",
+		dye_dark_grey = "hades_dye:dark_grey",
 		copper_ingot = "hades_core:copper_ingot",
 		tin_ingot = "hades_core:tin_ingot",
 		--[[
@@ -90,6 +100,12 @@ elseif minetest.get_modpath("hades_core") then
 	end
 	if minetest.get_modpath("hades_extraores") then
 		materials["silver_ingot"] = "hades_extraores:silver_ingot"
+		materials["aluminum_ingot"] = "hades_extraores:aluminum_ingot"
+	end
+	if minetest.get_modpath("hades_technic") then
+		materials.lead_ingot = "hades_technic:lead_ingot"
+		materials.carbon_steel_ingot = "hades_technic:carbon_steel_ingot"
+		materials.stainless_steel_ingot = "hades_technic:stainless_steel_ingot"
 	end
 end
 
@@ -276,6 +292,30 @@ minetest.register_craft( {
 	},
 })
 
+if materials.stainless_steel_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:stainless_steel_wire 2",
+		type = "shapeless",
+		recipe = {
+			materials.stainless_steel_ingot,
+			"basic_materials:empty_spool",
+			"basic_materials:empty_spool",
+		},
+	})
+end
+
+if materials.aluminum_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:aluminum_wire 2",
+		type = "shapeless",
+		recipe = {
+			materials.aluminum_ingot,
+			"basic_materials:empty_spool",
+			"basic_materials:empty_spool",
+		},
+	})
+end
+
 minetest.register_craft( {
 	output = "basic_materials:steel_strip 12",
 	recipe = {
@@ -293,6 +333,44 @@ minetest.register_craft( {
 })
 
 minetest.register_craft( {
+	output = "basic_materials:gold_strip 12",
+	recipe = {
+		{"", materials.gold_ingot, ""},
+		{materials.gold_ingot, "", ""},
+	},
+})
+
+if materials.lead_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:lead_strip 12",
+		recipe = {
+			{"", materials.lead_ingot, ""},
+			{materials.lead_ingot, "", ""},
+		},
+	})
+end
+
+if materials.stainless_steel_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:stainless_steel_strip 12",
+		recipe = {
+			{"", materials.stainless_steel_ingot, ""},
+			{materials.stainless_steel_ingot, "", ""},
+		},
+	})
+end
+
+if materials.aluminum_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:aluminum_strip 12",
+		recipe = {
+			{"", materials.aluminum_ingot, ""},
+			{materials.aluminum_ingot, "", ""},
+		},
+	})
+end
+
+minetest.register_craft( {
 	output = "basic_materials:steel_bar 6",
 	recipe = {
 		{"", "", materials.steel_ingot},
@@ -300,6 +378,39 @@ minetest.register_craft( {
 		{materials.steel_ingot, "", ""},
 	},
 })
+
+if materials.carbon_steel_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:carbon_steel_bar 6",
+		recipe = {
+			{"", "", materials.carbon_steel_ingot},
+			{"", materials.carbon_steel_ingot, ""},
+			{materials.carbon_steel_ingot, "", ""},
+		},
+	})
+end
+
+if materials.stainless_steel_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:stainless_steel_bar 6",
+		recipe = {
+			{"", "", materials.stainless_steel_ingot},
+			{"", materials.stainless_steel_ingot, ""},
+			{materials.stainless_steel_ingot, "", ""},
+		},
+	})
+end
+
+if materials.aluminum_ingot then
+	minetest.register_craft( {
+		output = "basic_materials:aluminum_bar 6",
+		recipe = {
+			{"", "", materials.aluminum_ingot},
+			{"", materials.aluminum_ingot, ""},
+			{materials.aluminum_ingot, "", ""},
+		},
+	})
+end
 
 minetest.register_craft( {
 	output = "basic_materials:padlock 2",
